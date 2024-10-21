@@ -1,13 +1,12 @@
-package ru.edme
+package pro.edme.primitive.output
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-class LessonOneTest {
-
+class TwelveAndTwoTest {
     @Test
     fun `Function must return correct value`() {
         val correctValue = "12 и 2"
-        assertEquals(LessonOne.superFunction(), correctValue)
+        assertEquals(TwelveAndTwo.getTwelveAndTwo(), correctValue)
     }
 }
