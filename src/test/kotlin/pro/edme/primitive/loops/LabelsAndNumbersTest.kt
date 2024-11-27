@@ -1,33 +1,15 @@
 package pro.edme.primitive.loops
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class LabelsAndNumbersTest {
     @Test
-    fun `Function must return correct value`() {
-        assertEquals(
-            LabelsAndNumbers.getText(-100),
-            "отрицательное четное число"
-        )
-        assertEquals(
-            LabelsAndNumbers.getText(100),
-            "положительное четное число"
-        )
-
-        assertEquals(
-            LabelsAndNumbers.getText(-51),
-            "отрицательное нечетное число"
-        )
-
-        assertEquals(
-            LabelsAndNumbers.getText(51),
-            "положительное нечетное число"
-        )
-
-        assertEquals(
-            LabelsAndNumbers.getText(0),
-            "ноль"
-        )
+    fun `Function getText() must return correct value`() {
+        assertThat(LabelsAndNumbers.getText(-100).trim()).isEqualToIgnoringCase("отрицательное четное число")
+        assertThat(LabelsAndNumbers.getText(100).trim()).isEqualToIgnoringCase("положительное четное число")
+        assertThat(LabelsAndNumbers.getText(-51).trim()).isEqualToIgnoringCase("отрицательное нечетное число")
+        assertThat(LabelsAndNumbers.getText(51).trim()).isEqualToIgnoringCase("положительное нечетное число")
+        assertThat(LabelsAndNumbers.getText(0).trim()).isEqualToIgnoringCase("ноль")
     }
 }

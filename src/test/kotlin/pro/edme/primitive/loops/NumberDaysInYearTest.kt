@@ -1,24 +1,12 @@
 package pro.edme.primitive.loops
 
-import org.apache.commons.lang3.StringUtils.equalsIgnoreCase
-import org.junit.jupiter.api.Assertions.assertTrue
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class NumberDaysInYearTest {
     @Test
-    fun `Function must return correct value`() {
-        assertTrue(
-            equalsIgnoreCase(
-                NumberDaysInYear.checkDayInYear(2300).trim(),
-                "количество дней в году: 365"
-            )
-        )
-
-        assertTrue(
-            equalsIgnoreCase(
-                NumberDaysInYear.checkDayInYear(2000).trim(),
-                "количество дней в году: 366"
-            )
-        )
+    fun `Function checkDayInYear() must return correct value`() {
+        assertThat(NumberDaysInYear.checkDayInYear(2300).trim()).isEqualToIgnoringCase("количество дней в году: 365")
+        assertThat(NumberDaysInYear.checkDayInYear(2000).trim()).isEqualToIgnoringCase("количество дней в году: 366")
     }
 }

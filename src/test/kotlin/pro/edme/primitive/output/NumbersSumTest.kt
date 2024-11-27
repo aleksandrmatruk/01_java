@@ -1,12 +1,11 @@
 package pro.edme.primitive.output
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class NumbersSumTest {
     @Test
-    fun `Function must return correct value`() {
-        val correctValue = 4
-        assertEquals(NumbersSum.sum(2, 2), correctValue)
+    fun `Function sum() must return correct value`() {
+        assertThat(NumbersSum.sum(2, 2)).isEqualTo(4)
     }
 }

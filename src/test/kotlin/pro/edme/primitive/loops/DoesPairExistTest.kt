@@ -1,31 +1,13 @@
 package pro.edme.primitive.loops
 
-import org.apache.commons.lang3.StringUtils.equalsIgnoreCase
-import org.junit.jupiter.api.Assertions.assertTrue
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class DoesPairExistTest {
     @Test
-    fun `Function must return correct value`() {
-        assertTrue(
-            equalsIgnoreCase(
-                DoesPairExist.checkPair(2, 2, 2),
-                "2 2 2"
-            )
-        )
-
-        assertTrue(
-            equalsIgnoreCase(
-                DoesPairExist.checkPair(1, 2, 2),
-                "2 2"
-            )
-        )
-
-        assertTrue(
-            equalsIgnoreCase(
-                DoesPairExist.checkPair(1, 2, 3),
-                ""
-            )
-        )
+    fun `Function checkPair() must return correct value`() {
+        assertThat(DoesPairExist.checkPair(2, 2, 2)).isEqualTo("2 2 2")
+        assertThat(DoesPairExist.checkPair(1, 2, 2)).isEqualTo("2 2")
+        assertThat(DoesPairExist.checkPair(1, 2, 3)).isEqualTo("")
     }
 }

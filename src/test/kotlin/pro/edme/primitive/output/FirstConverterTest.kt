@@ -1,12 +1,11 @@
 package pro.edme.primitive.output
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class FirstConverterTest {
     @Test
-    fun `Function must return correct value`() {
-        val correctValue = 105.8
-        assertEquals(FirstConverter.convertCelsiusToFahrenheit(41), correctValue)
+    fun `Function convertCelsiusToFahrenheit() must return correct value`() {
+        assertThat(FirstConverter.convertCelsiusToFahrenheit(41)).isEqualTo(105.8)
     }
 }

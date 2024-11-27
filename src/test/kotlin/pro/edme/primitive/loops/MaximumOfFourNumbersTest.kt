@@ -1,19 +1,12 @@
 package pro.edme.primitive.loops
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
-import kotlin.test.assertEquals
 
 class MaximumOfFourNumbersTest {
     @Test
-    fun `Function must return correct value`() {
-        assertEquals(
-            MaximumOfFourNumbers.getMaxOfFour(2, 3, 4, 5),
-            5
-        )
-
-        assertEquals(
-            MaximumOfFourNumbers.getMaxOfFour(5, 5, 5, 5),
-            5
-        )
+    fun `Function getMaxOfFour() must return correct value`() {
+        assertThat(MaximumOfFourNumbers.getMaxOfFour(2, 3, 4, 5)).isEqualTo(5)
+        assertThat(MaximumOfFourNumbers.getMaxOfFour(5, 5, 5, 5)).isEqualTo(5)
     }
 }

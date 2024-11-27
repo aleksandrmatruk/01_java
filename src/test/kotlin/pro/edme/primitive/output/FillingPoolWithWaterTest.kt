@@ -1,12 +1,11 @@
 package pro.edme.primitive.output
 
-import org.junit.jupiter.api.Assertions.assertEquals
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
 class FillingPoolWithWaterTest {
     @Test
-    fun `Function must return correct value`() {
-        val correctValue = 250_000
-        assertEquals(FillingPoolWithWater.getVolume(25, 5, 2), correctValue)
+    fun `Function getVolume() must return correct value`() {
+        assertThat(FillingPoolWithWater.getVolume(25, 5, 2)).isEqualTo(250_000)
     }
 }
