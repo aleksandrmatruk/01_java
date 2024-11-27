@@ -16,11 +16,8 @@ package pro.edme.primitive.input;
  * 3. Выведенный текст должен содержать введенное имя.
  * 4. Выведенный текст должен содержать введенное число.
  * 5. Выведенный текст должен полностью соответствовать заданию.
- * 6. Получить данные с клавиатуры можно через
- * BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
- * 7. Читать строки из BufferedReader можно через String a = reader.readLine();
- * 8. ЧИСЛО ДОЛЖНО БЫТЬ Integer !!!
- * 9. Название метода 'takeOverTheWorld' менять нельзя.
+ * 6. ЧИСЛО ДОЛЖНО БЫТЬ Integer !!!
+ * 7. Название метода 'takeOverTheWorld' менять нельзя.
  */
 
 public class PlanTakeOverTheWorld {
