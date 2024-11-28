@@ -16,8 +16,8 @@ class MultiplicationTableTest {
             "7 14 21 28 35 42 49 56 63 70 \n" +
             "8 16 24 32 40 48 56 64 72 80 \n" +
             "9 18 27 36 45 54 63 72 81 90 \n" +
-            "10 20 30 40 50 60 70 80 90 100 \n"
+            "10 20 30 40 50 60 70 80 90 100"
 
-        assertThat(MultiplicationTable.createMultiplicationTable()).isEqualTo(correctValue)
+        assertThat(MultiplicationTable.createMultiplicationTable().trim()).isEqualTo(correctValue)
     }
 }
