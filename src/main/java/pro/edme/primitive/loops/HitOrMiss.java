@@ -14,11 +14,8 @@ package pro.edme.primitive.loops;
  * <p>
  * Requirements:
  * 1. Программа должна выводить текст в методе 'main' на экран.
- * 2. Метод main не должен вызывать System.out.println() или System.out.print().
- * 3. Метод main должен вызывать метод checkInterval.
- * 4. Метод checkInterval должен быть static void.
- * 5. Метод checkInterval должен выводить текст на экран согласно заданию.
- * 6. Название метода 'checkInterval' менять нельзя.
+ * 2. Метод main должен вызывать метод checkInterval.
+ * 3. Название метода 'checkInterval' менять нельзя.
  */
 
 public class HitOrMiss {
