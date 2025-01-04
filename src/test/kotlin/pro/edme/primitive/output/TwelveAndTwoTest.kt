@@ -1,11 +1,11 @@
 package pro.edme.primitive.output
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import pro.edme.primitive.assertTrimmedEqualsIgnoreCase
 
 class TwelveAndTwoTest {
     @Test
     fun `Function getTwelveAndTwo() must return correct value`() {
-        assertThat(TwelveAndTwo.getTwelveAndTwo().trim()).isEqualTo("12 и 2")
+        TwelveAndTwo.getTwelveAndTwo().assertTrimmedEqualsIgnoreCase("12 и 2")
     }
 }

@@ -1,7 +1,7 @@
 package pro.edme.primitive.input
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import pro.edme.primitive.assertTrimmedEqualsIgnoreCase
 
 class MultiplicationTableTest {
     @Test
@@ -18,6 +18,6 @@ class MultiplicationTableTest {
             "9 18 27 36 45 54 63 72 81 90 \n" +
             "10 20 30 40 50 60 70 80 90 100"
 
-        assertThat(MultiplicationTable.createMultiplicationTable().trim()).isEqualTo(correctValue)
+        MultiplicationTable.createMultiplicationTable().assertTrimmedEqualsIgnoreCase(correctValue)
     }
 }

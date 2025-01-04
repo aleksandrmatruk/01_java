@@ -1,11 +1,11 @@
 package pro.edme.primitive.loops
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import pro.edme.primitive.assertTrimmedEqualsIgnoreCase
 
 class SortingThreeNumbersTest {
     @Test
     fun `Function sort() must return correct value`() {
-        assertThat(SortingThreeNumbers.sort(2, 3, 4).trim()).isEqualTo("4 3 2")
+        SortingThreeNumbers.sort(2, 3, 4).assertTrimmedEqualsIgnoreCase("4 3 2")
     }
 }

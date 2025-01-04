@@ -1,13 +1,19 @@
 package pro.edme.primitive.loops
 
-import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
+import pro.edme.primitive.assertTrimmedEqualsIgnoreCase
 
 class NastyaOrNastyaTest {
+    companion object {
+        private const val IDENTICALLY = "Имена идентичны"
+        private const val LENGTHS_ARE_EQUALS = "Длины имен равны"
+        private const val EMPTY = ""
+    }
+    
     @Test
     fun `Function must return correct value`() {
-        assertThat(NastyaOrNastya.compareNames("Nastya", "Nastya")).isEqualToIgnoringCase("Имена идентичны")
-        assertThat(NastyaOrNastya.compareNames("Vova", "Nastya")).isEqualToIgnoringCase("")
-        assertThat(NastyaOrNastya.compareNames("Vova", "Dima")).isEqualToIgnoringCase("Длины имен равны")
+        NastyaOrNastya.compareNames("Nastya", "Nastya").assertTrimmedEqualsIgnoreCase(IDENTICALLY)
+        NastyaOrNastya.compareNames("Vova", "Nastya").assertTrimmedEqualsIgnoreCase(EMPTY)
+        NastyaOrNastya.compareNames("Vova", "Dima").assertTrimmedEqualsIgnoreCase(LENGTHS_ARE_EQUALS)
     }
 }
