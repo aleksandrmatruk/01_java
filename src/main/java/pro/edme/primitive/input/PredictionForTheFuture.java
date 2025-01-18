@@ -1,5 +1,9 @@
 package pro.edme.primitive.input;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Предсказание на будущее.
  * Ввести с клавиатуры отдельно Имя, число1, число2.
@@ -23,19 +27,19 @@ package pro.edme.primitive.input;
  */
 
 public class PredictionForTheFuture {
-    public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
-
-        String name = null;
-        Integer numberOne = null;
-        Integer numberTwo = null;
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите имя: ");
+        String name = reader.readLine();
+        System.out.println("Введите число1: ");
+        Integer numberOne = Integer.valueOf(reader.readLine());
+        System.out.println("Введите число2: ");
+        Integer numberTwo = Integer.valueOf(reader.readLine());
 
         System.out.println(createPrediction(name, numberOne, numberTwo));
     }
 
     public static String createPrediction(String name, Integer numberOne, Integer numberTwo) {
-        //TODO: Напишите тут ваш код.
-
-        return "";
+        return String.format("%s получает %d через %d лет.", name, numberOne, numberTwo);
     }
 }
