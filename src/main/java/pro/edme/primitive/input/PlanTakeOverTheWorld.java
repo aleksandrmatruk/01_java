@@ -1,5 +1,7 @@
 package pro.edme.primitive.input;
 
+import java.util.Scanner;
+
 /**
  * План по захвату мира.
  * Ввести с клавиатуры число и имя, вывести на экран строку:
@@ -22,17 +24,16 @@ package pro.edme.primitive.input;
 
 public class PlanTakeOverTheWorld {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
-
-        String name = null;
-        Integer age = null;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите имя: ");
+        String name = in.nextLine();
+        System.out.println("Введите возраст: ");
+        Integer age = in.nextInt();
 
         System.out.println(takeOverTheWorld(name, age));
     }
 
     public static String takeOverTheWorld(String name, Integer age) {
-        //TODO: Напишите тут ваш код.
-
-        return "";
+        return String.format("%s захватит мир через %d лет. Му-ха-ха!", name, age);
     }
 }
