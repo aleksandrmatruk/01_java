@@ -1,5 +1,7 @@
 package pro.edme.primitive.loops;
 
+import java.util.Scanner;
+
 /**
  * Переходим дорогу вслепую.
  * Работа светофора для пешеходов запрограммирована следующим образом:
@@ -37,12 +39,37 @@ package pro.edme.primitive.loops;
 
 public class CrossingTheRoad {
     public static void main(String[] args) {
-        System.out.println(getTrafficLightColor(2.0));
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        Double number = in.nextDouble();
+        System.out.println(getTrafficLightColor(number));
     }
 
     public static String getTrafficLightColor(Double number) {
-        //TODO: Напишите тут ваш код.
+        String result;
+        double check = 3.0;
 
-        return "";
+        while (true) {
+            if (number >= check) {
+                check ++;
+            } else {
+                result = "зелёный";
+                break;
+            }
+            if (number >= check) {
+                check ++;
+            } else {
+                result = "жёлтый";
+                break;
+            }
+            if (number >= check) {
+                check +=3;
+            }else {
+                result = "красный";
+                break;
+            }
+
+        }
+        return result;
     }
 }
