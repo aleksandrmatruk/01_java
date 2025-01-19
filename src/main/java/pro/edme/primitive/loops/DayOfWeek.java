@@ -1,5 +1,7 @@
 package pro.edme.primitive.loops;
 
+import java.util.Scanner;
+
 /**
  * День недели.
  * Ввести с клавиатуры номер дня недели, в зависимости от номера вывести название
@@ -22,12 +24,22 @@ package pro.edme.primitive.loops;
 
 public class DayOfWeek {
     public static void main(String[] args) {
-        System.out.println(checkDay(2));
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        int number = in.nextInt();
+        System.out.println(checkDay(number));
     }
 
     public static String checkDay(int number) {
-        //TODO: Напишите тут ваш код.
-
-        return "";
+        return switch (number) {
+            case 1 -> "понедельник";
+            case 2 -> "вторник";
+            case 3 -> "среда";
+            case 4 -> "четверг";
+            case 5 -> "пятница";
+            case 6 -> "суббота";
+            case 7 -> "воскресенье";
+            default -> "такого дня недели не существует";
+        };
     }
 }
