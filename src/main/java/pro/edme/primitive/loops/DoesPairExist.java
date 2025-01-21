@@ -1,5 +1,9 @@
 package pro.edme.primitive.loops;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Существует ли пара?
  * Ввести с клавиатуры три целых числа. Определить, имеется ли среди них хотя бы одна пара равных между собой чисел.
@@ -31,13 +35,27 @@ package pro.edme.primitive.loops;
  */
 
 public class DoesPairExist {
-    public static void main(String[] args) {
-        System.out.println(checkPair(2, 2, 2));
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите число1: ");
+        int numberOne = Integer.parseInt(reader.readLine());
+        System.out.println("Введите число2: ");
+        int numberTwo = Integer.parseInt(reader.readLine());
+        System.out.println("Введите число3: ");
+        int numberThree = Integer.parseInt(reader.readLine());
+
+        System.out.println(checkPair(numberOne, numberTwo, numberThree));
     }
 
     public static String checkPair(int numberOne, int numberTwo, int numberThree) {
-        //TODO: Напишите тут ваш код.
 
-        return "";
+        String result = "";
+        if (numberOne == numberTwo && numberOne == numberThree)
+            result = String.format("%d %d %d ", numberOne, numberTwo, numberThree);
+        else if (numberOne == numberTwo) result = String.format("%d %d", numberOne, numberTwo);
+        else if (numberOne == numberThree) result = String.format("%d %d", numberOne, numberThree);
+        else if (numberTwo == numberThree) result = String.format("%d %d", numberTwo, numberThree);
+
+        return result;
     }
 }

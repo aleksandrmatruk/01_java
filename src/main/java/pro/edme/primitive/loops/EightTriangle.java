@@ -26,14 +26,16 @@ package pro.edme.primitive.loops;
 
 public class EightTriangle {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
-
         System.out.println(getTriangle());
     }
 
     public static String getTriangle() {
-        //TODO: Напишите тут ваш код.
+        StringBuilder result = new StringBuilder();
+        for (int i = 1; i <= 10; i++) {
+            result.append("8".repeat(i));
+            result.append("\n");
+        }
 
-        return "";
+        return result.toString();
     }
 }

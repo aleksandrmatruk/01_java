@@ -20,14 +20,16 @@ package pro.edme.primitive.loops;
 
 public class HitOrMiss {
     public static void main(String[] args) {
-        checkInterval(60);
-        checkInterval(112);
-        checkInterval(10);
+        System.out.println(checkInterval(60));
+        System.out.println(checkInterval(112));
+        System.out.println(checkInterval(10));
     }
 
     public static String checkInterval(int number) {
-        //TODO: Напишите тут ваш код.
+        String result;
+        if (number >= 50 && number <= 100) result = String.format("Число %d содержится в интервале.", number);
+        else result = String.format("Число %d не содержится в интервале.", number);
 
-        return "";
+        return result;
     }
 }
