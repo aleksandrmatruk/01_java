@@ -1,5 +1,9 @@
 package pro.edme.primitive.loops;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 /**
  * Максимум четырех чисел.
  * Ввести с клавиатуры четыре числа, и вывести максимальное из них.
@@ -15,14 +19,24 @@ package pro.edme.primitive.loops;
 
 public class MaximumOfFourNumbers {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число1: ");
+        int numberOne = in.nextInt();
+        System.out.println("Введите число2: ");
+        int numberTwo = in.nextInt();
+        System.out.println("Введите число3: ");
+        int numberThree = in.nextInt();
+        System.out.println("Введите число4: ");
+        int numberFour = in.nextInt();
 
-        System.out.println(getMaxOfFour(2, 2, 2, 2));
+        System.out.println(getMaxOfFour(numberOne, numberTwo, numberThree, numberFour));
     }
 
     public static int getMaxOfFour(int numberOne, int numberTwo, int numberThree, int numberFour) {
-        //TODO: Напишите тут ваш код.
+        if (numberOne > numberTwo && numberOne > numberThree && numberOne > numberFour) return numberOne;
+        else if (numberTwo > numberOne && numberTwo > numberThree && numberTwo > numberFour) return numberTwo;
+        else if (numberThree > numberOne && numberThree > numberTwo && numberThree > numberFour) return numberThree;
+        else return numberFour;
 
-        return 0;
     }
 }

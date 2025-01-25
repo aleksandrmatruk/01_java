@@ -1,6 +1,7 @@
 package pro.edme.primitive.loops;
 
 import java.math.BigInteger;
+import java.util.Scanner;
 
 /**
  * Ярлыки и числа.
@@ -18,11 +19,19 @@ import java.math.BigInteger;
 
 public class LabelsAndNumbers {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        BigInteger number = BigInteger.valueOf(Integer.parseInt(in.nextLine()));
+
+        System.out.println(getLabelByNumber(number));
     }
 
     public static String getLabelByNumber(BigInteger number) {
-        //TODO: Напишите тут ваш код.
-        return "";
+        if (number.signum() == 1 && !number.testBit(0)) return "Положительное четное число";
+        else if (number.signum() == 1 && number.testBit(0)) return "Положительное нечетное число";
+        else if (number.signum() == -1 && number.testBit(0)) return "Отрицательное нечетное число";
+        else if (number.signum() == -1 && !number.testBit(0)) return "Отрицательное четное число";
+        else return "Ноль";
+
     }
 }

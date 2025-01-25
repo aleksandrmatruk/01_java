@@ -1,5 +1,8 @@
 package pro.edme.primitive.loops;
 
+import java.util.Objects;
+import java.util.Scanner;
+
 /**
  * Настя или Настя?
  * Ввести с клавиатуры два имени, и если имена одинаковые вывести сообщение "Имена идентичны".
@@ -17,14 +20,18 @@ package pro.edme.primitive.loops;
 
 public class NastyaOrNastya {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите имя1: ");
+        String nameOne = in.nextLine();
+        System.out.println("Введите имя2: ");
+        String nameTwo = in.nextLine();
 
-        System.out.println(compareNames("Nastya", "Nastya"));
+        System.out.println(compareNames(nameOne, nameTwo));
     }
 
     public static String compareNames(String nameOne, String nameTwo) {
-        //TODO: Напишите тут ваш код.
-
-        return "";
+        if (Objects.equals(nameOne, nameTwo)) return "Имена идентичны";
+        else if (nameOne.length() == nameTwo.length()) return "Длины имен равны";
+        else return "";
     }
 }
