@@ -1,5 +1,9 @@
 package pro.edme.primitive.loops;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 /**
  * Сортировка трех чисел.
  * Ввести с клавиатуры три числа, и вывести их в порядке убывания.
@@ -15,14 +19,27 @@ package pro.edme.primitive.loops;
 
 public class SortingThreeNumbers {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число1: ");
+        int numberOne = in.nextInt();
+        System.out.println("Введите число2: ");
+        int numberTwo = in.nextInt();
+        System.out.println("Введите число3: ");
+        int numberThree = in.nextInt();
 
-        System.out.println(sort(2, 2, 2));
+        System.out.println(sort(numberOne, numberTwo, numberThree));
     }
 
     public static String sort(int numberOne, int numberTwo, int numberThree) {
-        //TODO: Напишите тут ваш код.
-
-        return "";
+        StringBuilder result = new StringBuilder();
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(numberOne);
+        list.add(numberTwo);
+        list.add(numberThree);
+        list.sort(Collections.reverseOrder());
+        for (Integer i : list) {
+            result.append(i + " ");
+        }
+        return result.toString();
     }
 }

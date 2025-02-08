@@ -1,5 +1,7 @@
 package pro.edme.primitive.loops;
 
+import java.util.Scanner;
+
 /**
  * Время года.
  * Напиши метод checkSeason. По номеру месяца,
@@ -22,12 +24,19 @@ package pro.edme.primitive.loops;
 
 public class TimeOfYear {
     public static void main(String[] args) {
-        System.out.println(checkSeason(2));
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите месяц: ");
+        int number = in.nextInt();
+        System.out.println(checkSeason(number));
     }
 
     public static String checkSeason(int number) {
-        //TODO: Напишите тут ваш код.
-
-        return "";
+        return switch (number) {
+            case 12, 1, 2 -> "зима";
+            case 3, 4, 5 -> "весна";
+            case 6, 7, 8 -> "лето";
+            case 9, 10, 11 -> "осень";
+            default -> "Ошибка: Нет такого месяца!";
+        };
     }
 }

@@ -1,5 +1,7 @@
 package pro.edme.primitive.loops;
 
+import java.util.Scanner;
+
 /**
  * Количество дней в году.
  * Ввести с клавиатуры год, определить количество дней в году. Результат вывести на экран в следующем виде:
@@ -30,12 +32,19 @@ package pro.edme.primitive.loops;
 
 public class NumberDaysInYear {
     public static void main(String[] args) {
-        System.out.println(checkDayInYear(2300));
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите год: ");
+        int year = in.nextInt();
+        System.out.println(checkDayInYear(year));
     }
 
     public static String checkDayInYear(int year) {
-        //TODO: Напишите тут ваш код.
-
-        return "";
+        if (year % 400 == 0) {
+            return "количество дней в году: 366";
+        } else if (year % 100 == 0) {
+            return "количество дней в году: 365";
+        } else if (year % 4 == 0) {
+            return "количество дней в году: 366";
+        } else return "количество дней в году: 365";
     }
 }

@@ -1,5 +1,7 @@
 package pro.edme.primitive.loops;
 
+import java.util.Scanner;
+
 /**
  * Суммирование.
  * Вводить с клавиатуры числа.
@@ -23,6 +25,16 @@ package pro.edme.primitive.loops;
 
 public class Summation {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
+        int result = 0;
+        while (true) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Введите число: ");
+            int number = in.nextInt();
+            result += number;
+            if (number == -1) {
+                System.out.println("result: " + result);
+                break;
+            }
+        }
     }
 }

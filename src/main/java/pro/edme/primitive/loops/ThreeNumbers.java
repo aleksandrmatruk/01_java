@@ -1,5 +1,7 @@
 package pro.edme.primitive.loops;
 
+import java.util.Scanner;
+
 /**
  * Три числа.
  * Ввести с клавиатуры три целых числа. Одно из чисел отлично от двух других, равных между собой.
@@ -21,14 +23,23 @@ package pro.edme.primitive.loops;
 
 public class ThreeNumbers {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
-
-        System.out.println(getDifferentNumber(4, 6, 6));
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите число1: ");
+        int numberOne = in.nextInt();
+        System.out.println("Введите число2: ");
+        int numberTwo = in.nextInt();
+        System.out.println("Введите число3: ");
+        int numberThree = in.nextInt();
+        System.out.println(getDifferentNumber(numberOne, numberTwo, numberThree));
     }
 
     public static int getDifferentNumber(int numberOne, int numberTwo, int numberThree) {
-        //TODO: Напишите тут ваш код.
-
-        return 0;
+        if (numberOne == numberTwo) {
+            return 3;
+        } else if (numberOne == numberThree) {
+            return 2;
+        } else if (numberTwo == numberThree) {
+            return 1;
+        } else return 0;
     }
 }

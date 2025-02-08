@@ -28,7 +28,6 @@ public class FillingPoolWithWater {
     }
 
     public static long getVolume(int a, int b, int c) {
-        //TODO: Напишите тут ваш код.
-        return 0;
+        return (long) a * b * c * 1000;
     }
 }
