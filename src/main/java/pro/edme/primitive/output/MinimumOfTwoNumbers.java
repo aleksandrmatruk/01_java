@@ -24,7 +24,6 @@ public class MinimumOfTwoNumbers {
     }
 
     public static int min(int a, int b) {
-        //TODO: Напишите тут ваш код.
-        return 0;
+        return Math.min(a, b);
     }
 }

@@ -26,8 +26,11 @@ public class SumDigitsThreeDigitNumber {
     }
 
     public static int sumDigitsInNumber(int number) {
-        //TODO: Напишите тут ваш код.
-
-        return 0;
+        int result = 0;
+        while (number != 0) {
+            result += number % 10;
+            number /= 10;
+        }
+        return result;
     }
 }

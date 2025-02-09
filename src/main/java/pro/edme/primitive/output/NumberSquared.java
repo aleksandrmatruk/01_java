@@ -18,7 +18,7 @@ package pro.edme.primitive.output;
 
 public class NumberSquared {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
+        System.out.println(sqr(5));
     }
 
     public static int sqr(int a) {

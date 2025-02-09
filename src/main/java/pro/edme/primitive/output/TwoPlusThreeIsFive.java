@@ -24,15 +24,15 @@ public class TwoPlusThreeIsFive {
         int b = 2;
 
         String result = new StringBuilder()
-                .append("два")
+//                .append("два")
                 .append(b)
                 .append(" плюс ")
-                .append(" минус ")
+//                .append(" минус ")
                 .append(a)
-                .append("три")
+//                .append("три")
                 .append(" равно ")
-                .append(" будет ")
-                .append("пять")
+//                .append(" будет ")
+//                .append("пять")
                 .append(a + b)
                 .toString();
 

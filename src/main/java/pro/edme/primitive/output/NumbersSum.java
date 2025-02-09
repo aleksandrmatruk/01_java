@@ -17,7 +17,7 @@ package pro.edme.primitive.output;
 
 public class NumbersSum {
     public static void main(String[] args) {
-        //TODO: Напишите тут ваш код.
+        sum(2, 2);
     }
 
     public static int sum(int a, int b) {

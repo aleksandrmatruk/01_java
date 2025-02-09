@@ -24,12 +24,11 @@ package pro.edme.primitive.output;
 
 public class SalaryIncrease {
     public static void main(String[] args) {
-        System.out.println(hackSalary(700));
+        hackSalary(700);
     }
 
     public static String hackSalary(int salary) {
-        // напишите тут ваш код
-
-        return "";
+        System.out.println("Твоя зарплата составляет: " + (salary + 100) + " долларов в месяц.");
+        return "Твоя зарплата составляет: " + (salary + 100) + " долларов в месяц.";
     }
 }
